@@ -6,21 +6,21 @@
 */
 
 
-@import url(../assets/bootstrap/css/bootstrap.min.css);
-@import url(../assets/font-awesome/css/font-awesome.min.css);
-@import url(../assets/revolution/css/settings.css);
-@import url(../assets/revolution/css/layers.css);
-@import url(../assets/revolution/css/navigation.css);
-@import url(../assets/jquery-ui-1.11.4/jquery-ui.css);
-@import url(../assets/owl.carousel-2/assets/owl.carousel.css);
-@import url(../assets/icomoon/style.css);
-@import url(../assets/animate.css);
-@import url(../assets/bootstrap-touch-spin/jquery.bootstrap-touchspin.css);
-@import url(../assets/hover.css);
-@import url(../assets/Polyglot-Language-Switcher-master/css/polyglot-language-switcher.css);
-@import url(../assets/fancyapps-fancyBox/source/jquery.fancybox.css);
-@import url(../assets/jquery.bxslider/jquery.bxslider.css);
-@import url(../assets/flaticon/flaticon.css);
+@import url(../bootstrap/css/bootstrap.min.css);
+@import url(../font-awesome/css/font-awesome.min.css);
+@import url(../revolution/css/settings.css);
+@import url(../revolution/css/layers.css);
+@import url(../revolution/css/navigation.css);
+@import url(../jquery-ui-1.11.4/jquery-ui.css);
+@import url(../owl.carousel-2/owl.carousel.css);
+@import url(../icomoon/style.css);
+@import url(../animate.css);
+@import url(../bootstrap-touch-spin/jquery.bootstrap-touchspin.css);
+@import url(../hover.css);
+@import url(../Polyglot-Language-Switcher-master/css/polyglot-language-switcher.css);
+@import url(../fancyapps-fancyBox/source/jquery.fancybox.css);
+@import url(../jquery.bxslider/jquery.bxslider.css);
+@import url(../flaticon/flaticon.css);
 @import url(../css/masterslider/style/masterslider.css);
 @import url(../css/masterslider/skins/default/style.css);
 @import url(../css/masterslider/style/ms-vertical.css);
@@ -29,40 +29,40 @@
 
 @font-face {
     font-family: 'bubblegum';
-    src: url(../assets/fonts/Bubblegum_Sans/BubblegumSans-Regular.ttf);
+    src: url(../fonts/Bubblegum_Sans/BubblegumSans-Regular.ttf);
 }
 
 @font-face {
     font-family: 'dosis-bold';
-    src: url(../assets/fonts/Dosis/Dosis-Bold.ttf);
+    src: url(../fonts/Dosis/Dosis-Bold.ttf);
 }
 @font-face {
     font-family: 'dosis-wxtrabold';
-    src: url(../assets/fonts/Dosis/Dosis-ExtraBold.ttf);
+    src: url(../fonts/Dosis/Dosis-ExtraBold.ttf);
 }
 @font-face {
     font-family: 'dosis-extralight';
-    src: url(../assets/fonts/Dosis/Dosis-ExtraLight.ttf);
+    src: url(../fonts/Dosis/Dosis-ExtraLight.ttf);
 }
 @font-face {
     font-family: 'dosis-light';
-    src: url(../assets/fonts/Dosis/Dosis-Light.ttf);
+    src: url(../fonts/Dosis/Dosis-Light.ttf);
 }
 @font-face {
     font-family: 'dosis-medium';
-    src: url(../assets/fonts/Dosis/Dosis-Medium.ttf);
+    src: url(../fonts/Dosis/Dosis-Medium.ttf);
 }
 @font-face {
     font-family: 'dosis-semibold';
-    src: url(../assets/fonts/Dosis/Dosis-SemiBold.ttf);
+    src: url(../fonts/Dosis/Dosis-SemiBold.ttf);
 }
 @font-face {
     font-family: 'dosis';
-    src: url(../assets/fonts/Dosis/Dosis-Regular.ttf);
+    src: url(../fonts/Dosis/Dosis-Regular.ttf);
 }
 @font-face {
     font-family: 'Rancho';
-    src: url(../assets/fonts/Rancho/Rancho-Regular.ttf);
+    src: url(../fonts/Rancho/Rancho-Regular.ttf);
 }
 
 

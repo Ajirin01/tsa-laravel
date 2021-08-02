@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="{{asset('frontend/css/style-phase2.css')}}">
 	<link rel="stylesheet" media="all" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/common-style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/pricing2.css')}}">
@@ -34,7 +35,7 @@
 					</ul>
 				<ul>
 					<li><a href="{{ route('gallery') }}">Gallery</a></li>
-					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
+					<li><a href="http://eportal.trumpetsoundacademy.org">Portal</a></li>
 					
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
 					<li><a href="{{ route('gallery') }}">Archive</a></li>
@@ -82,7 +83,7 @@
 					</li>
 				</ul>
 				<div class="bg-bottom"></div>
-				</div>
+			</div>
 				
 				<div class="featured-post-area" style="margin-top: -5%;">
 					<div class="container">
