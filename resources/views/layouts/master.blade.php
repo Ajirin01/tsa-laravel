@@ -25,7 +25,7 @@
 <body>
 	<header id="header">
 		<div class="container">
-			<a href="index.html" id="logo" title="TrumpetSoundAcademy">TrumpetSoundAcademy</a>
+			<a href="/" id="logo" title="TrumpetSoundAcademy">TrumpetSoundAcademy</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
