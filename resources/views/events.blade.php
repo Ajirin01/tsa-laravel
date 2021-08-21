@@ -6,58 +6,27 @@
         <div class="col-lg-8">
             <div class="col-lg-12">
                 <div class="main-content" style="width: 100%">
-                    <h3 style="font-size: 2.5rem">Upcoming events </h3>
+                <h3 style="font-size: 2.5rem">Upcoming events </h3>
                     <section class="posts-con">
-                        <article>
-                            <div class="current-date">
-                                <p>July</p>
-                                <p class="date">28</p>
-                            </div>
-                            <div class="info">
-                                <h3>Excursion to Kainji Dam</h3>
-                                <p class="info-line"><span class="time">10:30 AM</span><span class="place">Excursion to Kainji Lake</span></p>
-                                <p>All parents should prepare their ward for the excursion. departure time must be kept sacrosanct.<br>Please let's try to keep to time</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="current-date">
-                                <p>Sept</p>
-                                <p class="date">17</p>
-                            </div>
-                            <div class="info">
-                                <h3>Excursion to Search FM. 92.3</h3>
-                                <p class="info-line"><span class="time">10:30 AM</span><span class="place">Federal University of Technology Minna.</span></p>
-                                <p>An adventure to the search FM studio will be a lovely time to explore real-time media and broadcast reporting, in ordet to give our ward a wonderful experience. Parents do well to prepare your ward for this experience</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="current-date">
-                                <p>Sept</p>
-                                <p class="date">17</p>
-                            </div>
-                            <div class="info">
-                                <h3>Excursion to Search FM. 92.3</h3>
-                                <p class="info-line"><span class="time">10:30 AM</span><span class="place">Federal University of Technology Minna.</span></p>
-                                <p>An adventure to the search FM studio will be a lovely time to explore real-time media and broadcast reporting, in ordet to give our ward a wonderful experience. Parents do well to prepare your ward for this experience</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="current-date">
-                                <p>Sept</p>
-                                <p class="date">17</p>
-                            </div>
-                            <div class="info">
-                                <h3>Excursion to Search FM. 92.3</h3>
-                                <p class="info-line"><span class="time">10:30 AM</span><span class="place">Federal University of Technology Minna.</span></p>
-                                <p>An adventure to the search FM studio will be a lovely time to explore real-time media and broadcast reporting, in ordet to give our ward a wonderful experience. Parents do well to prepare your ward for this experience</p>
-                            </div>
-                        </article>
-                    </section>
+                        @foreach ($archival_events as $event)
+                            <article>
+                                <div class="current-date">
+                                    <p style="color: white">{{ Carbon\Carbon::parse($event->data)->format('F') }}</p>
+                                    <p class="date">{{ Carbon\Carbon::parse($event->data)->format('d') }}</p>
+                                </div>
+                                <div class="info">
+                                    <h3>{{ $event->title }}</h3>
+                                    <p class="info-line"><span class="time">{{ Carbon\Carbon::parse($event->data)->diffforHumans() }}</span><span class="place">{{ $event->location }}</span></p>
+                                    <p>All parents should prepare their ward for the excursion. departure time must be kept sacrosanct.<br>Please let's try to keep to time</p>
+                                </div>
+                            </article>
+                        @endforeach
+                        
                 </div>
             </div>
             
         </div>
-        <div class="col-lg-4">
+        {{-- <div class="col-lg-4">
             <aside id="sidebar">
                 <div class="widget clearfix calendar">
                     <h3 style="font-size: 2.5rem">Event calendar</h3>
@@ -160,7 +129,7 @@
                     </div>
                 </div>
             </aside>
-        </div>
+        </div> --}}
     </div>
 
     {{-- <div class="main-content">

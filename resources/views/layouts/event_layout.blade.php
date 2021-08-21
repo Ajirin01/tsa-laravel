@@ -35,11 +35,11 @@
 					<li><a href="{{ route('events') }}">Events</a></li>
 					</ul>
 				<ul>
-					<li><a href="{{ route('gallery') }}">Gallery</a></li>
+					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery</a></li>
 					<li><a href="http://eportal.trumpetsoundacademy.org">Portal</a></li>
 					
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
-					<li><a href="{{ route('gallery') }}">Archive</a></li>
+					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Archive</a></li>
 					
 					</ul>
 			</nav>
@@ -193,6 +193,8 @@
 <script src="{{asset('frontend/js/plugins.js')}}"></script>
 <script src="{{asset('frontend/js/main.js')}}"></script>
 <script src="{{asset('frontend/js/active.js')}}"></script>
+{{-- <script>
 
+</script> --}}
 </body>
 </html>
