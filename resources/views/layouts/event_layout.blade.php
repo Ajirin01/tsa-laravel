@@ -36,7 +36,7 @@
 					</ul>
 				<ul>
 					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery</a></li>
-					<li><a href="http://eportal.trumpetsoundacademy.org">Portal</a></li>
+					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
 					
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
 					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Archive</a></li>
@@ -57,7 +57,7 @@
 					<div class="info"><br>
 						<h2 id="tsa" style="cursor: pointer">TSA</h2> 
 						<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-						<a href="#">Admission! Enrol Online Now</a>
+						<a href="#">Admission! Download Admission Form</a>
 					</div>
 				</div>
 				<!-- / content -->
@@ -67,7 +67,7 @@
 					<div class="info"><br>
 						<h2>TSA</h2> 
 						<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-						<a href="#">Admission! Enrol Online Now</a>
+						<a href="#">Admission! Download Admission Form</a>
 					</div>
 				</div>
 				<!-- / content -->
@@ -77,7 +77,7 @@
 					<div class="info"><br>
 						<h2>TSA</h2> 
 						<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-						<a href="#">Admission! Enrol Online Now</a>
+						<a href="#">Admission! Download Admission Form</a>
 					</div>
 				</div>
 				<!-- / content -->
