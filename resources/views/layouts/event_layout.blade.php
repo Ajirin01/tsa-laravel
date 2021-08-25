@@ -145,7 +145,8 @@
 
  <div id="fancy">
 	 <h2>Request information</h2>
-	 <form action="#">
+	 <form action="{{ route('send_request') }}" method="POST">
+		@csrf
 		 <div class="left">
 			 <fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
 			 <fieldset class="name"><input placeholder="Name..." type="text"></fieldset>

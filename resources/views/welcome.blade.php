@@ -73,6 +73,7 @@
 @section('lower-content')
 <section class="posts">
     <div class="container">
+        
         <article class="color-tests">
             <div class="pic color-test rgb-to-hex-shorthand"><img width="121" src="{{asset('frontend/images/2.png')}}" alt=""></div>
             
@@ -95,7 +96,33 @@
                 <p>Moulding lives into Christ Likeness by Developing Character and Academic Excellence </p>
             </div>
         </article>
+        
     </div>
     <!-- / container -->
 </section><br>
+
+<section class="post">
+    <div class="container">
+        <div class="col-md-12">
+            <h1 class="text-center">
+                Current Affairs
+            </h1>
+            <div class="slider-cont2">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach ($current_affairs as $current_affair)
+                            <div class="swiper-slide">{{ $current_affair->description }}</div>
+                        @endforeach
+                      
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

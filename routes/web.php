@@ -3,9 +3,11 @@ use App\Event;
 use App\Gallery;
 use App\Category;
 use Carbon\Carbon;
+use App\CurrentAffair;
 
 Route::get('/', function () {
-    return view('welcome');
+    $current_affairs = CurrentAffair::all();
+    return view('welcome',['current_affairs'=> $current_affairs]);
 });
 
 Route::get('/about', function(){
@@ -62,3 +64,5 @@ Route::get('/gallery/{category}', function($category){
     
     return view('gallery',['galleries'=> $galleries, 'categories'=> $categories, 'host'=> $image_host]);
 })->name('gallery');
+
+Route::post('send-request', 'RequestController@sendRequest')->name('send_request');

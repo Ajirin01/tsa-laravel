@@ -18,9 +18,43 @@
 	<!-- <link href="assets/css/documentation.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="public/css/animate.css"> -->
 	
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="{{asset('frontend/dist/css/swiper.min.css')}}">
+	
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
+	<style>
+		.slider-cont2 {
+		position: relative;
+		height: 150px;
+		}
+		.swiper-container {
+		width: 100%;
+		height: 100%;
+
+		}
+		.swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		}
+	</style>
 </head>
 <body>
 	<header id="header">
@@ -332,7 +366,8 @@
 
 			<div id="vacancy">
 				<h2>Request information</h2>
-				<form action="#">
+				<form action="{{ route('send_request') }}" method="POST">
+					@csrf
 					<div class="left">
 						<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
 						<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
@@ -363,6 +398,28 @@
 	<script src="{{asset('frontend/js/plugins.js')}}"></script>
 	<script src="{{asset('frontend/js/main.js')}}"></script>
 	<script src="{{asset('frontend/js/active.js')}}"></script>
+	<!-- Swiper JS -->
+	<script src="{{asset('frontend/dist/js/swiper.min.js')}}"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+	  var swiper = new Swiper('.swiper-container', {
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: {
+		  delay: 2500,
+		  disableOnInteraction: false,
+		},
+		pagination: {
+		  el: '.swiper-pagination',
+		  clickable: true,
+		},
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+	  });
+	</script>
 	<script>
 		/*var toggle_btn = document.getElementById('toggle-btn')
 		var more_container = document.getElementById('more-container')
