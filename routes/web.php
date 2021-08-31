@@ -4,22 +4,23 @@ use App\Gallery;
 use App\Category;
 use Carbon\Carbon;
 use App\CurrentAffair;
+use App\Publication;
 
 Route::get('/', function () {
     $current_affairs = CurrentAffair::all();
-    return view('welcome',['current_affairs'=> $current_affairs]);
+    return view('welcome',['current_affairs'=> $current_affairs, 'title'=> 'Welcome']);
 });
 
 Route::get('/about', function(){
-    return view('about');
+    return view('about',['title'=> 'About']);
 })->name('about');
 
 Route::get('/admission', function(){
     return view('admission');
-})->name('admission');
+})->name('admission', ['title'=> 'Admission']);
 
 Route::get('/chapel', function(){
-    return view('chapel');
+    return view('chapel', ['title'=> 'Chapel']);
 })->name('chapel');
 
 Route::get('/events', function(){
@@ -40,7 +41,7 @@ Route::get('/events', function(){
     }else{
         $image_host = 'eportal.trumpetsoundacademy.com';
     }
-    return view('events',['upcoming_events'=> $upcoming_events, 'archival_events'=> $archival_events, 'host'=> $image_host]);
+    return view('events',['upcoming_events'=> $upcoming_events, 'archival_events'=> $archival_events, 'host'=> $image_host, 'title'=> 'Events']);
 })->name('events');
 
 Route::get('/gallery/{category}', function($category){
@@ -62,7 +63,12 @@ Route::get('/gallery/{category}', function($category){
         $image_host = 'eportal.trumpetsoundacademy.com';
     }
     
-    return view('gallery',['galleries'=> $galleries, 'categories'=> $categories, 'host'=> $image_host]);
+    return view('gallery',['galleries'=> $galleries, 'categories'=> $categories, 'host'=> $image_host, 'title'=> 'Gallery']);
 })->name('gallery');
+
+Route::get('publication', function(){
+    $publications = Publication::paginate(25);
+    return view('publication',  ['title'=> 'publication' , 'publications'=> $publications]);
+})->name('publication');
 
 Route::post('send-request', 'RequestController@sendRequest')->name('send_request');

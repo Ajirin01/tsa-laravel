@@ -33,14 +33,14 @@
 					<li><a href="{{ route('about') }}">About TSA</a></li>
 					<li><a href="{{ route('admission') }}">Admission</a></li>
 					<li><a href="{{ route('events') }}">Events</a></li>
+					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery</a></li>
 					</ul>
 				<ul>
-					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery</a></li>
-					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
 					
+					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
 					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Archive</a></li>
-					
+					<li><a href="{{ route('publication') }}">Publication</a></li>
 					</ul>
 			</nav>
 			<!-- / navigation -->

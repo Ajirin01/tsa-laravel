@@ -56,7 +56,7 @@
 		}
 	</style>
 </head>
-<body>
+<body id="body">
 	<header id="header">
 		<div class="container">
 			<a href="/" id="logo" title="TrumpetSoundAcademy">TrumpetSoundAcademy</a>
@@ -66,15 +66,17 @@
 					<li><a href="{{ route('about') }}">About TSA</a></li>
 					<li><a href="{{ route('admission') }}">Admission</a></li>
 					<li><a href="{{ route('events') }}">Events</a></li>
-					</ul>
-				<ul>
 					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery</a></li>
+				</ul>
+				<ul>
+					
 					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
 					
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
 					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Archive</a></li>
+					<li><a href="{{ route('publication') }}">Publication</a></li>
 					
-					</ul>
+				</ul>
 			</nav>
 			<!-- / navigation -->
 		</div>
@@ -88,7 +90,7 @@
 					<li>
 						<div class="container">
 							<div class="info"><br>
-								<h2 id="tsa" style="cursor: pointer">TSA</h2> 
+								<h2 id="title" style="cursor: pointer">{{$title}}</h2> 
 								<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
 								<a href="#">Admission! Download Admission Form</a>
 							</div>
@@ -533,8 +535,15 @@
 				}
 			})
 
-			$('#tsa').on('click', function(){
+			document.querySelector('.slider').style.height = '100vh'
+
+			// $('.slider').css('height','300vh')
+			document.getElementById('body').style.overflowY = "hidden"
+
+			$('#title').on('click', function(){
 				document.getElementById('body').style.overflowY = "scroll"
+				$('.slider').css('height','600px')
+
 			})
 		})
 	</script>
