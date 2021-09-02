@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('upper-content')
-    <div class="col-12 col-lg-12">
+    <div id="down" class="col-12 col-lg-12">
         <!-- Single Featured Post -->
         <h1 style="font-family:Verdana, Geneva, sans-serif; text-align:center"><span>ANCHOR HYMNS FOR THE SEASON </span></h1>
         

@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- {{ json_decode($galleries[0]->photo)[0] }} --}}
-    <div class="col-lg-12">
+    <div id="down" class="col-lg-12">
         <div class="container">
             <div class="col-12 col-lg-12">
                 <div class="col-lg-8">

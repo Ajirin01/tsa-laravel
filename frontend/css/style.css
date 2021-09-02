@@ -695,6 +695,7 @@ h1.single{
 	background: url(../images/bg_arrow.png) no-repeat 100% 50%;
 }
 
+
 .slider:after {
 	position: absolute;
 	background: url(../images/bg_white_arrow.png) no-repeat;

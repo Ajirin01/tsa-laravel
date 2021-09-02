@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
 @section('upper-content')
-    <!-- Single Featured Post -->
-    @foreach ($publications as $key => $publication)
+    <div id="down">
+        <!-- Single Featured Post -->
+        @foreach ($publications as $key => $publication)
             <div class="single-blog-post featured-post mb-30" style="word-wrap: break-word">
                 <div>
                     {{-- <a href="{{URL::to('publications/'.$article_type.'/'.$publication->id)}}"><img style=" width: 100%; height: 500px" src="{{$publication->article_intro_image}}" alt=""></a> --}}
@@ -70,5 +71,7 @@
             <br>
             <!-- ##### Advert Add Area End ##### --> 
         @endif --}}
-    @endforeach
+        @endforeach
+    </div>
+    
 @endsection

@@ -90,7 +90,7 @@
 					<li>
 						<div class="container">
 							<div class="info"><br>
-								<h2 id="title" style="cursor: pointer">{{$title}}</h2> 
+								<a style="background: none !important" href="#down"><h2 id="title" style="cursor: pointer">{{$title}}</h2></a> 
 								<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
 								<a href="#">Admission! Download Admission Form</a>
 							</div>

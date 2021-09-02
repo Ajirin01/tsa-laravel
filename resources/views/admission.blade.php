@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('upper-content')
-<div class="col-md-12">
+<div id="down" class="col-md-12">
     <div class="row">
         <h2 style="font-family:Verdana, Geneva, sans-serif; text-align:center; color:#F00"><span>REQUIREMENT AND PROCEDURES FOR ADMISSION </span></h2>
     </div>
