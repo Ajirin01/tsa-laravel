@@ -72,3 +72,10 @@ Route::get('publication', function(){
 })->name('publication');
 
 Route::post('send-request', 'RequestController@sendRequest')->name('send_request');
+
+Route::get('vacancy-form', 'ApplicationController@vacancyForm')->name('vacancy_form');
+
+Route::post('vacancy', 'ApplicationController@vacancySubmit')->name('vacancy');
+
+Route::get('get_lga/{state_id}', 'ApplicationController@get_lga')->name('get_lga');
+

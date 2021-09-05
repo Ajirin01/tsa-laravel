@@ -48,10 +48,10 @@
                                             <img style="margin: 0 auto" src="{{asset('frontend/images/image013.png')}}" alt="" srcset="">
                                         </div> <br>
                                         <div class="col-12 col-md-6">
-                                            <a href="#vacancy" class="info-request2">
+                                            <a href="{{ route('vacancy_form') }}" class="info-request2">
                                                 <!-- <i class="icomoon icon-download"></i> -->
                                                 <span class="holder"><br>
-                                                    <span class="text-center" style="font-size: 1.5rem; line-height: 1.2">Download Vacancy Application Form</span>
+                                                    <span class="text-center" style="font-size: 1.5rem; line-height: 1.2">Online Vacancy Application!</span>
                                                 </span>
                                                 <!-- <span class="arrow"></span> -->
                                             </a>

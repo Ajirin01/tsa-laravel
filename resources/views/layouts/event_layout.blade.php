@@ -197,5 +197,93 @@
 {{-- <script>
 
 </script> --}}
+
+<script>
+    //$(document).ready(function(){
+        $('#section-b').slideUp()
+        $('#section-c').slideUp()
+        $('#section-d').slideUp()
+        $('#section-e').slideUp()
+		$('#submit').hide()
+
+        function goSectionB(){
+            $('#section-a').slideUp()
+            $('#section-b').slideDown()
+            $('#section-c').slideUp()
+            $('#section-d').slideUp()
+            $('#section-e').slideUp()
+        }
+
+        function goSectionC(){
+            $('#section-a').slideUp()
+            $('#section-b').slideUp()
+            $('#section-c').slideDown()
+            $('#section-d').slideUp()
+            $('#section-e').slideUp()
+        }
+
+        function goSectionD(){
+            $('#section-a').slideUp()
+            $('#section-b').slideUp()
+            $('#section-c').slideUp()
+            $('#section-d').slideDown()
+            $('#section-e').slideUp()
+        }
+
+        /*function goSectionE(){
+            $('#section-a').slideUp()
+            $('#section-b').slideUp()
+            $('#section-c').slideUp()
+            $('#section-d').slideUp()
+            $('#section-e').slideDown()
+        }*/
+
+        function reviewForm(){
+            $('#section-a-btn').hide()
+            $('#section-b-btn').hide()
+            $('#section-c-btn').hide()
+            $('#review-btn').hide()
+
+            $('#section-a').slideDown()
+            $('#section-b').slideDown()
+            $('#section-c').slideDown()
+            $('#section-d').slideDown()
+			$('#submit').show()
+            //$('#section-e').slideDown()
+			
+        }
+
+		function getLGA(state_id){
+			var url = '{{ route('get_lga', [':id']) }}';
+			url = url.replace(':id', state_id);
+			var lga = $('#lga_id');
+
+			$.ajax({
+				dataType: 'json',
+				url: url,
+				success: function (resp) {
+					//console.log(resp);
+					lga.empty();
+					$.each(resp, function (i, data) {
+						lga.append($('<option>', {
+							value: data.id,
+							text: data.name
+						}));
+					});
+					// $('#lga-cont').empty()
+					// document.getElementById('lga-cont').innerHTML = lga.innerHTML
+				// lga = lga
+
+				document.getElementById('lga-cont').innerHTML= '<select required data-placeholder="Select State First" class="select-search form-control" name="lga_id" id="lga_id">'+ lga[0].innerHTML+'</select>'
+				console.log(lga[0])
+
+				}
+			})
+			// lga.empty()
+			
+
+		}
+    //})
+</script>
 </body>
 </html>
