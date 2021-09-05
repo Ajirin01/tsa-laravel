@@ -59,7 +59,7 @@
 <body id="body">
 	<header id="header">
 		<div class="container">
-			<a href="/" id="logo" title="TrumpetSoundAcademy">TrumpetSoundAcademy</a>
+			<a href="{{url('/')}}" id="logo" title="TrumpetSoundAcademy">TrumpetSoundAcademy</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>

@@ -16,8 +16,8 @@ Route::get('/about', function(){
 })->name('about');
 
 Route::get('/admission', function(){
-    return view('admission');
-})->name('admission', ['title'=> 'Admission']);
+    return view('admission', ['title'=> 'Admission']);
+})->name('admission');
 
 Route::get('/chapel', function(){
     return view('chapel', ['title'=> 'Chapel']);
