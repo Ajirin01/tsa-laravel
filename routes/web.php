@@ -5,6 +5,7 @@ use App\Category;
 use Carbon\Carbon;
 use App\CurrentAffair;
 use App\Publication;
+use App\Archive;
 
 Route::get('/', function () {
     $current_affairs = CurrentAffair::all();
@@ -68,8 +69,23 @@ Route::get('/gallery/{category}', function($category){
 
 Route::get('publication', function(){
     $publications = Publication::paginate(25);
-    return view('publication',  ['title'=> 'publication' , 'publications'=> $publications]);
+    return view('publication',  ['title'=> 'Publication' , 'publications'=> $publications]);
 })->name('publication');
+
+Route::get('archive', function(){
+    $archives = Archive::paginate(10);
+    return view('archive',  ['title'=> 'Archive' , 'archives'=> $archives]);
+})->name('archive');
+
+Route::get('archive-detail/{id}', function($id){
+    $archive = Archive::find($id);
+    return view('archive_detail',  ['title'=> 'Archive' , 'archive'=> $archive]);
+});
+
+Route::get('publication-detail/{id}', function($id){
+    $publication = Publication::find($id);
+    return view('archive',  ['title'=> 'Publication' , 'publication'=> $publication]);
+});
 
 Route::post('send-request', 'RequestController@sendRequest')->name('send_request');
 

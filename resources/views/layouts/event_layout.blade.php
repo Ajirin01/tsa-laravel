@@ -39,7 +39,7 @@
 					
 					<li><a href="https://eportal.trumpetsoundacademy.org">Portal</a></li>
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
-					<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Archive</a></li>
+					<li><a href="{{ route('archive') }}">Archive</a></li>
 					<li><a href="{{ route('publication') }}">Publication</a></li>
 					</ul>
 			</nav>
