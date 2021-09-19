@@ -4,6 +4,7 @@
     <div id="down">
         <!-- Single Featured Post -->
         <div class="col-md-12">
+            
             @foreach ($publications as $key => $publication)
                 <div class="col-md-6">
                     <div class="single-blog-post featured-post mb-30" style="word-wrap: break-word">
