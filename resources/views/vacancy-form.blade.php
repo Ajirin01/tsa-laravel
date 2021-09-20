@@ -8,7 +8,7 @@
             <form action="{{ route('vacancy') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div id="section-a">
-                    <legend>SECTION A</legend>
+                    <legend class="text-center">SECTION A</legend>
                     <fieldset>
                         <div class="row">
                             <div class="col-md-6">
@@ -312,7 +312,7 @@
                 </div>
 
                 <div id="section-b">
-                    <legend>SECTION B: DETAILS OF EDUCATION AND QUALIFICATIONS</legend>
+                    <legend class="text-center">SECTION B: DETAILS OF EDUCATION AND QUALIFICATIONS</legend>
                     <fieldset>
                         <div class="row">
                             <h5>NB:Copies of certificates must accompany this form. (Originals should be brought to interview)</h5>
@@ -430,7 +430,7 @@
                 </div>
 
                 <div id="section-c">
-                    <legend>SECTION C: DETAILS OF EMPLOYMENTSINCE LEAVING SCHOOL</legend>
+                    <legend class="text-center">SECTION C: DETAILS OF EMPLOYMENTSINCE LEAVING SCHOOL</legend>
                     <fieldset>
                         <div class="row">
                             <h5>(Periods of apprenticeship and trade should be indicated)</h5>
@@ -512,7 +512,7 @@
                 </div>
 
                 <div id="section-d">
-                    <legend>SECTION D: SPIRITUAL ANDGENERALDETAILS</legend>
+                    <legend class="text-center">SECTION D: SPIRITUAL ANDGENERALDETAILS</legend>
                     <fieldset>
                         <div class="row">
                             <div class="col-md-6">
@@ -637,7 +637,7 @@
                 </div>
 
                 <div id="section-e">
-                    <legend>SECTION E: FOR OFFICIAL USE ONLY</legend>
+                    <legend class="text-center">SECTION E: FOR OFFICIAL USE ONLY</legend>
                     <fieldset>
                         <div class="row">
                             <h5 class="text-danger">(To be completed by interview panel)</h5>
