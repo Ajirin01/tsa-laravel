@@ -32,7 +32,7 @@ Route::get('/events', function(){
 
     // return response()->json(Carbon::parse($archival_events[0]->date)->diffforHumans());
 
-    // return response()->json(Carbon::parse($archival_events[0]->date)->format('F'));
+    // return response()->json(Carbon::parse($upcoming_events[0]->date)->format('F'));
     // return response()->json(Carbon::parse($archival_events[0]->date)->format('d'));
     
 

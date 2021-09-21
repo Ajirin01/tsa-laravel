@@ -8,7 +8,7 @@
                 <div class="main-content" style="width: 100%">
                 <h3 style="font-size: 2.5rem">Upcoming events </h3>
                     <section class="posts-con">
-                        @foreach ($archival_events as $event)
+                        @foreach ($upcoming_events as $event)
                             <article>
                                 <div class="current-date">
                                     <p style="color: white">{{ Carbon\Carbon::parse($event->data)->format('F') }}</p>
