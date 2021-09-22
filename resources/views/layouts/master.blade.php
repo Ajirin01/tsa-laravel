@@ -312,12 +312,12 @@
 						<div class="col-2 col-md-4">
 							<h3>Quick Links</h3>
 							<ul>
-								<li><a href="#">Admission</a></li>
-								<li><a href="#">About TSA</a></li>
-								<li><a href="#">Events </a></li>
-								<li><a href="#">Gallery </a></li>
-								<li class="last"><a href="#">Portal </a></li>
-								<li><a href="#">Archive </a></li>
+								<li><a href="{{ route('admission') }}">Admission</a></li>
+								<li><a href="/">About TSA</a></li>
+								<li><a href="{{ route('events') }}">Events </a></li>
+								<li><a href="{{ route('gallery') }}">Gallery </a></li>
+								<li class="last"><a href="https://eportal.trumpetsoundacademy.org">Portal </a></li>
+								<li><a href="{{ route('archive') }}">Archive </a></li>
 							</ul>
 						</div>
 						<div class="col-3 col-md-4">
