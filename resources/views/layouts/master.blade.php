@@ -321,7 +321,7 @@
 							</ul>
 						</div>
 						<div class="col-3 col-md-4">
-							<h3>Social media</h3>
+							<h3>Social media </h3>
 							<p>You can find us on our social media handles.</p>
 							<ul>
 								<li class="facebook"><a href="#">Facebook</a></li>
