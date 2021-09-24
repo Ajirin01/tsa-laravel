@@ -315,13 +315,13 @@
 								<li><a href="{{ route('admission') }}">Admission</a></li>
 								<li><a href="/">About TSA</a></li>
 								<li><a href="{{ route('events') }}">Events </a></li>
-								<li><a href="{{ route('gallery') }}">Gallery </a></li>
+								<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery </a></li>
 								<li class="last"><a href="https://eportal.trumpetsoundacademy.org">Portal </a></li>
 								<li><a href="{{ route('archive') }}">Archive </a></li>
 							</ul>
 						</div>
 						<div class="col-3 col-md-4">
-							<h3>Social media </h3>
+							<h3>Social media</h3>
 							<p>You can find us on our social media handles.</p>
 							<ul>
 								<li class="facebook"><a href="#">Facebook</a></li>
