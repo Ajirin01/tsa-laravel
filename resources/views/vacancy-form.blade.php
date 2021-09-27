@@ -56,8 +56,8 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Age: </label>
-                                    <input type="number" value="{{ old('applicant_age') }}" name="applicant_age" class="form-control" placeholder="Student Age">
+                                    <label>Age:<span class="text-danger">*</span> </label>
+                                    <input type="number" value="{{ old('applicant_age') }}" name="applicant_age" class="form-control" required placeholder="Student Age">
                                 </div>
                             </div>
 
@@ -296,7 +296,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="d-block">Upload Passport Photo:</label>
-                                    <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
+                                    <input value="{{ old('photo') }}" accept="image/*" type="file"  class="form-input-styled" data-fouc id="photo0">
+                                    <input type="hidden" name="photo" id="photo_el0">
                                     <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
                                 </div>
                             </div>
@@ -382,9 +383,10 @@
                                     <tbody>
                                         @for ($i = 0; $i < 3; $i++)
                                             <tr>
-                                                <td><input class="form-control" type="file" name="certificates[{{$i}}]" id=""></td>
-                                                <td><input class="form-control" type="date" name="date[{{$i}}]" id=""></td>
-                                                <td><input class="form-control" type="text" name="grade[{{$i}}]" id=""></td>
+                                                <td><input class="form-control" type="file"  id="cer{{$i}}"></td>
+                                                <input type="hidden" name="certificates[]" id="cer_el{{$i}}">
+                                                <td><input class="form-control" type="date" name="date[]" id=""></td>
+                                                <td><input class="form-control" type="text" name="grade[]" id=""></td>
                                             </tr>
                                         @endfor
                                         
@@ -487,7 +489,12 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input class="form-control" type="file" name="ref_name[]" id=""></td>
+                                            <td><input class="form-control" type="text" name="ref_name[]" id=""></td>
+                                            <td><input class="form-control" type="date" name="ref_fullname[]" id=""></td>
+                                            <td><input class="form-control" type="text" name="ref_phone_no[]" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="form-control" type="text" name="ref_name[]" id=""></td>
                                             <td><input class="form-control" type="date" name="ref_fullname[]" id=""></td>
                                             <td><input class="form-control" type="text" name="ref_phone_no[]" id=""></td>
                                         </tr>

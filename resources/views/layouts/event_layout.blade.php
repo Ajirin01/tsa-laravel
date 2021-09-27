@@ -285,5 +285,54 @@
 		}
     //})
 </script>
+
+<script>
+		$(document).ready(function(){
+			console.log("hello")
+
+			function readURL(input,str,index){
+				if(input.files && input.files[0]){
+					var reader = new FileReader()
+		
+					reader.onload = function(e){
+						var id = str+index
+						// $(id).attr('src', e.target.result)
+						document.getElementById(id).value = e.target.result
+						console.log(document.getElementById(id).value)
+		
+					}
+					reader.readAsDataURL(input.files[0])
+				}
+			}
+	   
+	  	 	var state = 0
+	
+			if(state == 0){
+				$('#cer0').change(function(){
+					readURL(this,'cer_el', 0)
+				});
+				state = 1
+			}if(state == 1){
+				$('#cer1').change(function(){
+					readURL(this,'cer_el', 1)
+				});
+				state = 2
+			}if(state == 2){
+				$('#cer1').change(function(){
+					readURL(this,'cer_el', 1)
+				});
+				state = 0
+			}
+
+			if(state == 0){
+				$('#photo0').change(function(){
+					readURL(this,'photo_el', 0)
+				});
+				state = 0
+			}
+	
+		})
+		
+	</script>
 </body>
 </html>

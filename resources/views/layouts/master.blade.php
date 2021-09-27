@@ -545,7 +545,11 @@
 				$('.slider').css('height','600px')
 
 			})
+
+
+			
 		})
 	</script>
+	
 </body>
 </html>
