@@ -28,9 +28,9 @@ class SendRequest extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data->email)
+        return $this->from($this->data['email'])
                             ->to('admin@trumpetsoundacademy.org')
-                            ->subject('Subject: New Enquiry')
+                            ->subject('Subject: '.$this->data['subject'])
                             ->view('email.sendRequest-mail-view')
                             ->with('email',$this->data);
     }

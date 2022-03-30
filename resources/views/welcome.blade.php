@@ -15,17 +15,16 @@
                                 <div style="font: 2rem">
                                     <h3 style="line-height: 2">
                                         <!-- Welcome to Trumpet Sound Academy -->
-                                        Trumpet Sound Academy (TSA) 
-                                        is the first and foremost 
-                                        school in Minna, Niger State 
-                                        that uses mainly the Accelerated 
-                                        Christian Education (ACE)
-                                        School of Tomorrow curriculum 
-                                        and inculcates the Nigerian 
-                                        curriculum to bridge all gap 
-                                        topics and subjects. 
-                                        This makes the school unique, 
-                                        as its approach is not conventional.  
+                                        Trumpet Sound Academy (TSA) is the first
+                                        school in Minna–Nigeria that harmonized
+                                        and uses the Accelerated, 
+                                        Alpha and Acts Christian Education 
+                                        (ACE) curricula and inculcates 
+                                        the Nigerian curriculum to bridge 
+                                        all gap topics and subjects. This makes 
+                                        the school unique, as its approach is not 
+                                        conventional, especially as it deploys 
+                                        the individualized learning system.
                                     </h3><br>
                                     <h3 style="line-height: 2">
                                         It places emphasis on learning
@@ -40,7 +39,7 @@
                                         well as with the parents.</p><br>
                                     </h3><br>
                                     <div style="width: 200px; padding: 20px; background-color: #2b4167; border-radius: 50px; margin: 0 auto">
-                                        <a href="/about.html"><h4 class="text-center" style="color:white !important; font-size:0.8rem">… Read more About Us …</h4></a>
+                                        <a href="{{ route('about') }}"><h4 class="text-center" style="color:white !important; font-size:0.8rem">… Read more About Us …</h4></a>
                                     </div > <br><br>
 
                                     <div class="col-12 justisfy-center">

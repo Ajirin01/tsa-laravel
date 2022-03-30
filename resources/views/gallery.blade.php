@@ -5,6 +5,9 @@
     <div id="down" class="col-lg-12">
         <div class="container">
             <div class="col-12 col-lg-12">
+				@if (count($galleries) == 0)
+					<h3 style="font-size: 2.5rem" class="single">No photos form gallery at the moment, please try again later</h3>
+				@endif
                 <div class="col-lg-8">
                     <h3 style="font-size: 2.5rem" class="single">Photos of the selected category</h3>
 

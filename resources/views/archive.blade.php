@@ -2,9 +2,14 @@
 
 @section('content')
     <div id="down">
-        <!-- Single Featured Post -->
-        
         <div class="col-md-12">
+            @if (count($archives) == 0)
+                <h2 class="text-center">
+                    No information currently available, Please Check again later!
+                </h2>
+            @else
+                
+            @endif
             @foreach ($archives as $key => $archive)
                 <div class="col-md-6">
                     <div class="single-blog-post featured-post mb-30" style="word-wrap: break-word">

@@ -5,6 +5,15 @@
     <div class="container">
         <div id="admission">
             <h2>Application Form</h2>
+            @if (Session::has('errors'))
+                <ul>
+                    @foreach(json_decode(Session::get('errors')) as $error)
+                        <li class="text text-danger">*{{$error[0]}}*</li>
+                    @endforeach
+                    {{-- {{Session::get('errors')}} --}}
+                </ul>
+            @endif
+            {{Session::forget('errors')}}
             <form action="{{ route('vacancy') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div id="section-a">
@@ -23,12 +32,13 @@
                                     <label> Post for which application is being made: <span class="text-danger">*</span></label>
                                     {{-- <input value="{{ old('post_applying_for') }}" class="form-control" placeholder="Post" name="post_applying_for" type="text" required> --}}
                                     <div>
-                                        <select required data-placeholder="Please Select the Post Applying  for" class="select-search form-control" name="post_applying_for" id="post_applying_for">
+                                        <select data-placeholder="Please Select the Post Applying  for" class="select-search form-input" name="post_applying_for" id="post_applying_for">
                                             <option value="">Please Select Option</option>
                                             <option value="Teacher">Teacher</option>
                                             <option value="Cleaner">Cleaner</option>
                                             <option value="GateKeeper">GateKeeper</option>
                                             <option value="Accountant">Accountant</option>
+                                            <option value="Other">Other</option>
                                             {{-- <option value="Teacher">Teacher</option> --}}
                                         </select>
                                     </div>
@@ -47,8 +57,8 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>(b)Permanent Address<span class="text-danger">*</span></label>
-                                    <input value="{{ old('applicant_permanent_address') }}" class="form-control" placeholder="Address" name="applicant_permanent_address" type="text" required>
+                                    <label>(b)Permanent Address</span></label>
+                                    <input value="{{ old('applicant_permanent_address') }}" class="form-control" placeholder="Address" name="applicant_permanent_address" type="text">
                                 </div>
                             </div>
                         </div>
@@ -64,7 +74,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="gender">Gender: <span class="text-danger">*</span></label>
-                                    <select class="select form-control" id="gender" name="applicant_gender" required data-fouc data-placeholder="Choose..">
+                                    <select class="select form-control" id="gender" name="applicant_gender" data-placeholder="Choose..">
                                         <option value=""></option>
                                         <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Male</option>
                                         <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Female</option>
@@ -74,8 +84,8 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Phone:</label>
-                                    <input value="{{ old('applicant_phone') }}" type="text" name="applicant_phone" class="form-control" placeholder="" >
+                                    <label>Phone:<span class="text-danger">*</span></label>
+                                    <input value="{{ old('applicant_phone') }}" type="text" name="applicant_phone" class="form-control" placeholder="" required>
                                 </div>
                             </div>
 
@@ -99,8 +109,8 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
-                                    <select data-placeholder="Choose..." required name="applicant_nal_id" id="nal_id" class="select-search form-control">
+                                    <label for="nal_id">Nationality:</span></label>
+                                    <select data-placeholder="Choose..." name="applicant_nal_id" id="nal_id" class="select-search form-control">
                                         <option value=""></option>
                                         @foreach($nationals as $nal)
                                             <option {{ (old('applicant_nal_id') == $nal->id ? 'selected' : '') }} value="{{ $nal->id }}">{{ $nal->name }}</option>
@@ -449,11 +459,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input value="{{old('name_and_address_of_employer')}}" class="form-control" type="text" name="name_and_address_of_employer[]" id=""></td>
-                                            <td><input value="{{old('from')}}" class="form-control" type="text" name="from[]" id=""></td>
-                                            <td><input value="{{old('to')}}" class="form-control" type="text" name="to[]" id=""></td>
-                                            <td><input value="{{old('postion_held')}}" class="form-control" type="text" name="postion_held[]" id=""></td>
-                                            <td><input value="{{old('salary_received')}}" class="form-control" type="text" name="salary_received[]" id=""></td>
+                                            <td><input value="{{old('name_and_address_of_employer')}}" class="form-control" type="text" name="name_and_address_of_employer" id=""></td>
+                                            <td><input value="{{old('from')}}" class="form-control" type="text" name="from" id=""></td>
+                                            <td><input value="{{old('to')}}" class="form-control" type="text" name="to" id=""></td>
+                                            <td><input value="{{old('postion_held')}}" class="form-control" type="text" name="postion_held" id=""></td>
+                                            <td><input value="{{old('salary_received')}}" class="form-control" type="text" name="salary_received" id=""></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -549,10 +559,10 @@
                                     <input value="{{ old('pastor_name') }}" class="form-control" name="pastor_name" type="text" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Pastor’s Phone<span class="text-danger">*</span></label>
-                                    <input value="{{ old('pastor_phone') }}" class="form-control" name="pastor_phone" type="number" required>
+                                    <input value="{{ old('pastor_phone') }}" class="form-control" name="pastor_phone" type="tel" required>
                                 </div>
                             </div>
                         </div>

@@ -37,10 +37,10 @@ Route::get('/events', function(){
     
 
 
-    if($host == 'localhost'){
+    if($host == 'tsa.org'){
         $image_host = 'lav_sms';
     }else{
-        $image_host = 'eportal.trumpetsoundacademy.com';
+        $image_host = 'trumpetsoundacademy.com';
     }
     return view('events',['upcoming_events'=> $upcoming_events, 'archival_events'=> $archival_events, 'host'=> $image_host, 'title'=> 'Events']);
 })->name('events');
@@ -58,8 +58,8 @@ Route::get('/gallery/{category}', function($category){
 
     $host = Request::server('SERVER_NAME');
 
-    if($host == 'localhost'){
-        $image_host = 'lav_sms';
+    if($host == 'tsa.org'){
+        $image_host = 'localhost:8000';
     }else{
         $image_host = 'eportal.trumpetsoundacademy.com';
     }
@@ -69,17 +69,19 @@ Route::get('/gallery/{category}', function($category){
 
 Route::get('publication', function(){
     $publications = Publication::paginate(25);
-    return view('publication',  ['title'=> 'Publication' , 'publications'=> $publications]);
+    return view('publication',  ['title'=> 'Publications' , 'publications'=> $publications]);
 })->name('publication');
 
 Route::get('archive', function(){
     $archives = Archive::paginate(10);
+    // $archives = Archive::where('title', 'hello')->paginate(10);
+
     return view('archive',  ['title'=> 'Archive' , 'archives'=> $archives]);
 })->name('archive');
 
 Route::get('archive-detail/{id}', function($id){
     $archive = Archive::find($id);
-    return view('archive_detail',  ['title'=> 'Archive' , 'archive'=> $archive]);
+    return view('archive_detail',  ['title'=> $archive->title , 'archive'=> $archive]);
 });
 
 Route::get('publication-detail/{id}', function($id){
@@ -87,7 +89,7 @@ Route::get('publication-detail/{id}', function($id){
     return view('archive',  ['title'=> 'Publication' , 'publication'=> $publication]);
 });
 
-Route::post('send-request', 'RequestController@sendRequest')->name('send_request');
+Route::post('send-request', 'RequestController@send')->name('send_request');
 
 Route::get('vacancy-form', 'ApplicationController@vacancyForm')->name('vacancy_form');
 

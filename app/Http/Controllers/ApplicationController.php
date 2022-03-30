@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\LocationRepo;
 use App\VacancyApplication;
+use Validator;
+use Session;
 
 class ApplicationController extends Controller
 {
@@ -22,6 +24,21 @@ class ApplicationController extends Controller
 
     public function vacancySubmit(Request $request){
         // return response()->json($request);
+        $rules = [
+            'applicant_name'=> 'required| min: 5| max: 100',
+            'post_applying_for'=> 'required',
+            'applicant_present_address'=> 'required',
+            'applicant_age'=> 'required',
+            'applicant_gender'=> 'required',
+            'applicant_phone'=> 'required| numeric| min: 11| max: 13'
+        ];
+
+        $validate = Validator::make($request->all(), $rules);
+        
+        if($validate->fails()){
+            Session::put('errors',$validate->errors());
+            return redirect("/vacancy-form#down")->withInput();
+        }
         $data = [];
         $data['applicant_name'] = $request->applicant_name;
         $data['post_applying_for'] = $request->post_applying_for;

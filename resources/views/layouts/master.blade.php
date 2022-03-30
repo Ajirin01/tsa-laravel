@@ -4,6 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Trumpet Sound Academy</title>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -14,6 +19,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/fonts/BebasNeueRegular.ttf')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
+  	<link rel="stylesheet" href="{{ asset('frontend/fonts/css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<!-- <link href="assets/css/documentation.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="public/css/animate.css"> -->
@@ -74,7 +80,7 @@
 					
 					<li><a href="{{ route('chapel') }}">Chapel</a></li>
 					<li><a href="{{ route('archive') }}">Archive</a></li>
-					<li><a href="{{ route('publication') }}">Publication</a></li>
+					<li><a href="{{ route('publication') }}">Publications</a></li>
 					
 				</ul>
 			</nav>
@@ -86,13 +92,19 @@
 	<!-- / header -->
 			
 			<div class="slider">
+				
 				<ul class="bxslider">
 					<li>
 						<div class="container">
 							<div class="info"><br>
+								<div style="width: 100%; text-align: center" class="animate__animated animate__bounce animate__infinite">
+									<span style="margin: 0 auto; font-size: 2rem; color: white" class="iconify" data-icon="icomoon-free:arrow-down"></span>
+									 <br><small style="color:white">click {{$title}} to show more</small>
+								</div>
 								<a style="background: none !important" href="#down"><h2 id="title" style="cursor: pointer">{{$title}}</h2></a> 
-								<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-								<a href="#">Admission! Download Admission Form</a>
+                            
+								<marquee style="margin-top: -3%"> <h2><span>Molding lives into Christ-likeness</span></h2></marquee>
+								<a download href="Application Form TSA General.pdf">Admission! Download Admission Form</a>
 							</div>
 						</div>
 						<!-- / content -->
@@ -101,8 +113,8 @@
 						<div class="container">
 							<div class="info"><br>
 								<h2>TSA</h2> 
-								<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-								<a href="#">Admission! Download Admission Form</a>
+								<marquee style="margin-top: -3%"> <h2><span>Molding lives into Christ-likeness</span></h2></marquee>
+								<a download href="Application Form TSA General.pdf">Admission! Download Admission Form</a>
 							</div>
 						</div>
 						<!-- / content -->
@@ -111,8 +123,8 @@
 						<div class="container">
 							<div class="info"><br>
 								<h2>TSA</h2> 
-								<marquee style="margin-top: -6%"> <h2><span>We Mould lives Into Christ Likeness </span></h2></marquee>
-								<a href="#">Admission! Download Admission Form</a>
+								<marquee style="margin-top: -3%"> <h2><span>Molding lives into Christ-likeness</span></h2></marquee>
+								<a download href="Application Form TSA General.pdf">Admission! Download Admission Form</a>
 							</div>
 						</div>
 						<!-- / content -->
@@ -139,28 +151,15 @@
 																<p class="yellow-rect-box">Latest Update</p>
 															</div>
 															<div id="breakingNewsTicker" class="ticker">
-																<ul>
-																	<li><a href=""><h3>Admission!!! Apply for the ongoing admission online or download form</h3></a></li>
-																	<li><a href=""><h3>Vacancy!!! Appply for the current positions</h3></a></li>
-																	<li><a href=""><h3>Examination!!! Our Examination is commencing next week</h3></a></li>
+																<ul style="height: 20px">
+																	<li><h3>Admission!!! Apply for the ongoing admission online or download form</h3></li>
+																	<li><h3>Vacancy!!! Appply for the current positions</h3></li>
+																	<li><h3>Examination!!! Our Examination is commencing next week</h3></li>
 																	
 																</ul>
 															</div>
 														</div>
-								
-														<!-- Breaking News Widget -->
-														<!-- <div class="breaking-news-area d-flex align-items-center mt-15">
-															<div class="news-title title2 yellow-rect-box">
-																<p class="yellow-rect-box">Popular Update</p>
-															</div>
-															<div id="internationalTicker" class="ticker">
-																<ul>
-																	{{-- @foreach ($random_articles as $random)
-																		<li><a href="{{URL::to('articles/'.$random['article_type'].'/'.$random['id'])}}">{{$random['article_title']}}</a></li>
-																	@endforeach --}}
-																</ul>
-															</div>
-														</div> -->
+														
 													</div>
 													
 													
@@ -304,16 +303,16 @@
 						<div class="col-1 col-md-4">
 							<h3>Contact</h3>
 							<ul>
-								<li class="address"><a href="#">149, Bosso Low-Cost, Minna, Niger State, Nigeria.</a></li>
-								<li class="mail"><a href="#">contact@trumpetsoundacademy.org</a></li>
-								<li class="phone last"><a href="#">(+234) 903-344-9494</a></li>
+								<li class="address"><a href="https://www.google.com/maps/place/149+Bosso+Road,+Bosso+920101,+Minna/@9.6513667,6.5316187,17z/data=!3m1!4b1!4m5!3m4!1s0x104c7087b645dcef:0xa28fff55fb1cdbb0!8m2!3d9.6513614!4d6.5338074">149, Bosso Low-Cost, Minna, Niger State, Nigeria.</a></li>
+								<li class="mail"><a href="mailto:contact@trumpetsoundacademy.org">contact@trumpetsoundacademy.org</a></li>
+								<li class="phone last"><a href="tel:+2349033449494">(+234) 903-344-9494</a></li>
 							</ul>
 						</div>
 						<div class="col-2 col-md-4">
 							<h3>Quick Links</h3>
 							<ul>
 								<li><a href="{{ route('admission') }}">Admission</a></li>
-								<li><a href="/">About TSA</a></li>
+								<li><a href="{{ route('about') }}">About TSA</a></li>
 								<li><a href="{{ route('events') }}">Events </a></li>
 								<li><a href="{{ route('gallery', ['category'=> 'all']) }}">Gallery </a></li>
 								<li class="last"><a href="https://eportal.trumpetsoundacademy.org">Portal </a></li>
@@ -324,10 +323,11 @@
 							<h3>Social media</h3>
 							<p>You can find us on our social media handles.</p>
 							<ul>
-								<li class="facebook"><a href="#">Facebook</a></li>
+								<li class="facebook"><a href="https://www.facebook.com/profile.php?id=100079557627159">Facebook</a></li>
 								
-								<li class="twitter"><a href="#">Twitter</a></li>
-								<li class="Instagram"><a href="#">Instagram</a></li>
+								<li class="twitter"><a href="https://mobile.twitter.com/tsahnigeria">Twitter</a></li>
+								<li class="google-plus"><a href="https://www.instagram.com/tsahqnigeria">Instagram</a></li>
+								<li class="pinterest"><a href="https://youtube.com/channel/UCcfN4C0oHDKQZoUCKM_9KGQ">Youtube</a></li>
 							</ul>
 						</div>
 					</div>
@@ -351,38 +351,61 @@
 		
 			<div id="fancy">
 				<h2>Request information</h2>
-				<form action="#">
-					<div class="left">
-						<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-						<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-						<fieldset class="subject"><select><option>Admission Enquiry</option><option>School Location</option><option>School Fees</option></select></fieldset>
-					</div>
-					<div class="right">
-						<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-					</div>
-					<div class="btn-holder">
-						<button class="btn blue" type="submit">Send request</button>
-					</div>
-				</form>
-			</div>
-
-			<div id="vacancy">
-				<h2>Request information</h2>
 				<form action="{{ route('send_request') }}" method="POST">
 					@csrf
 					<div class="left">
-						<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-						<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-						<fieldset class="subject"><select><option>Admission Enquiry</option><option>School Location</option><option>School Fees</option></select></fieldset>
+						<fieldset class="mail"><input name="email" placeholder="Email address..." type="email" required></fieldset>
+						<fieldset class="name"><input name="name" placeholder="Name..." type="text" required></fieldset>
+						<fieldset class="subject">
+							<select name="subject" required>
+								<option value="Admission Enquiry">Admission Enquiry</option>
+								<option value="School Location">School Location</option>
+								<option value="School Fees">School Fees</option>
+								<option value="Other">Other</option>
+							</select>
+						</fieldset>
 					</div>
 					<div class="right">
-						<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+						<fieldset class="question"><textarea name="message" placeholder="Question..." required></textarea></fieldset>
 					</div>
 					<div class="btn-holder">
 						<button class="btn blue" type="submit">Send request</button>
 					</div>
 				</form>
 			</div>
+			{{-- @php
+				echo "<script> console.log('hello')</script>";
+			@endphp --}}
+			<a style="display: none" id="dia" href="#vacancy" class="info-request">hello </a>
+			<input type="hidden" name="" id="v_errors" value="{{Session::get('v_errors')}}">
+			<input type="hidden" name="" id="msg" value="{{Session::get('msg')}}">
+			@if (Session::has('v_errors'))
+				<div id="vacancy">
+					<h2>{{Session::get('err_title')}}</h2>
+					<ul>
+						@foreach(json_decode(Session::get('v_errors')) as $error)
+							<li class="text text-danger">*{{$error[0]}}*</li>
+						@endforeach
+						{{-- {{Session::get('errors')}} --}}
+					</ul>
+				</div>
+			@endif
+            {{Session::forget('v_errors')}}
+
+			@if (Session::has('msg'))
+			@php
+				echo "<script> document.getElementById('dia').click() </script>";
+			@endphp
+			<div id="vacancy1">
+				<h2>{{Session::get('msg_title') }}</h2>
+				<h3>{{$msg}}</h3>
+			</div>
+			@endif
+			{{Session::forget('msg')}}
+			
+
+
+			
 		</div>
 	</div>
 
@@ -448,6 +471,10 @@
 			var toggle_btn2 = document.getElementById('toggle-btn2')
 			var toggle_btn3 = document.getElementById('toggle-btn3')
 			var toggle_btn4 = document.getElementById('toggle-btn4')
+			
+			if(document.getElementById('v_errors').value.length != 0){
+				document.getElementById('dia').click()
+			}
 
 			$('#more-container').slideUp()
 			$('#more-container1').slideUp()
@@ -538,7 +565,14 @@
 			document.querySelector('.slider').style.height = '100vh'
 
 			// $('.slider').css('height','300vh')
-			document.getElementById('body').style.overflowY = "hidden"
+			var down = "#down"
+			var loc = window.location.href
+			console.log(loc)
+			if(loc.includes(down)){
+				document.getElementById('body').style.overflowY = "scroll"
+			}else{
+				document.getElementById('body').style.overflowY = "hidden"
+			}
 
 			$('#title').on('click', function(){
 				document.getElementById('body').style.overflowY = "scroll"
