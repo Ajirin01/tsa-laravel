@@ -377,6 +377,7 @@
 				echo "<script> console.log('hello')</script>";
 			@endphp --}}
 			<a style="display: none" id="dia" href="#vacancy" class="info-request">hello </a>
+			<a style="display: none" id="dia1" href="#vacancy1" class="info-request">hello </a>
 			<input type="hidden" name="" id="v_errors" value="{{Session::get('v_errors')}}">
 			<input type="hidden" name="" id="msg" value="{{Session::get('msg')}}">
 			@if (Session::has('v_errors'))
@@ -474,6 +475,9 @@
 			
 			if(document.getElementById('v_errors').value.length != 0){
 				document.getElementById('dia').click()
+			}
+			if(document.getElementById('msg').value.length != 0){
+				document.getElementById('dia1').click()
 			}
 
 			$('#more-container').slideUp()
